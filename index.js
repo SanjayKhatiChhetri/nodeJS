@@ -32,6 +32,12 @@ app.post("/addCustomer", (req, res) => {
 	const id = Date.now().toString();
 	customers.push({ id, firstName, lastName, email, phone });
 	res.redirect("/");
-})
+});
+
+app.get("/editCustomer/:id", (req, res) => {
+	const { id } = req.params;
+	const customer = customers.find((customer) => customer.id === id);
+	res.render("edit_customer.pug", { customer });
+});
 
 module.exports = app;

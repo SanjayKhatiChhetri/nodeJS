@@ -14,7 +14,6 @@
 		"helmet": "^7.0.0",
 		"nodemon": "^2.0.22",
 		"pug": "^3.0.2",
-		"vercel": "^31.0.1"
 	},
 	"devDependencies": {},
 	"keywords": [],
