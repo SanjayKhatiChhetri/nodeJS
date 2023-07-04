@@ -1,0 +1,32 @@
+doctype html 
+html(lang="en")
+	head 
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		//- Bootstrap 5 CSS
+		link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous")
+
+		title Add Customer
+	body.container-sm
+		.d-flex.flex-row.my-3
+			.grow-0.shrink-1
+				a.btn.btn-light(href="/") ⮜ Back to customers
+			.grow-1
+				h1.ps-4 Add new customer
+		form(action="/addCustomer", method="post")
+			div.mb-3
+				label.form-label.fw-medium(for="firstName") First Name:
+				input.form-control(type="text" id="firstName" name="firstName" placeholder="James")
+			div.mb-3
+				label.form-label.fw-medium(for="lastName") Last Name:
+				input.form-control(type="text" id="lastName" name="lastName" placeholder="Cameron")
+			div.mb-3
+				label.form-label.fw-medium(for="email") Email:
+				input.form-control(type="email" id="email" name="email" placeholder="james@gmail.com")
+			div.mb-3
+				label.form-label.fw-medium(for="phone") Phone:
+				input.form-control(type="phone" id="phone" name="phone" placeholder="+1 123 456 7890")
+			div.mb-3
+				input.btn.btn-primary(type="submit", value="Add Customer")
+		//- Bootstrap 5 JS includes popper js
+		script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous")
