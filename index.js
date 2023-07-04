@@ -34,6 +34,4 @@ app.post("/addCustomer", (req, res) => {
 	res.redirect("/");
 })
 
-app.listen(port, () => {
-	console.log(`Server is running on port http://localhost:${port}`);
-});
+module.exports = app;
