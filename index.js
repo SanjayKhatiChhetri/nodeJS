@@ -2,9 +2,11 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const helmet = require("helmet");
 
+require('dotenv').config();
 const app = express();
 
 const port = process.env.PORT || 3000;
+
 // Set the view engine to pug
 app.set("view engine", "pug");
 // Middleware
@@ -40,4 +42,4 @@ app.get("/editCustomer/:id", (req, res) => {
 	res.render("edit_customer.pug", { customer });
 });
 
-module.exports = app;
+app.listen(port, () => console.log(`Server running on port ${port}`));
