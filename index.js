@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const helmet = require("helmet");
+const path = require('path');
 
 require('dotenv').config();
 const app = express();
@@ -9,6 +10,7 @@ const port = process.env.PORT || 3000;
 
 // Set the view engine to pug
 app.set("view engine", "pug");
+app.set('views', path.join(__dirname, 'views'));
 // Middleware
 app.use(helmet())
 app.use(bodyParser.json());
