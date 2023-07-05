@@ -8,9 +8,10 @@ const app = express();
 
 const port = process.env.PORT || 3000;
 
+app.set('views', path.join(__dirname, './views'));
 // Set the view engine to pug
 app.set("view engine", "pug");
-app.set('views', path.join(__dirname, 'views'));
+
 // Middleware
 app.use(helmet())
 app.use(bodyParser.json());
